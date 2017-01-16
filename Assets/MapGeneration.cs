@@ -17,7 +17,8 @@ public class MapGeneration : MonoBehaviour {
 	public void GenerateMap(){
 		for(int y = 0; y < 20; y++){
 			for(int x = 0; x < 20; x++){
-				Instantiate(TileArray[0], new Vector3((-0.5F * y) + (0.5F * x),(x * -0.25F),0), Quaternion.identity);
+				//Instantiate(TileArray[0], new Vector3((-0.5F * y) + (0.5F * x),(x * -0.25F),0), Quaternion.identity);
+				Instantiate(TileArray[1], new Vector3((-0.5F * y) + (0.5F * x),(-0.25F * y) + (-0.25F * x), -y - x), Quaternion.identity);
 			}
 		}
 	}
